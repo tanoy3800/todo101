@@ -17,7 +17,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: tanoy
+          username: tanoy3800
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: Build and tag Docker images
@@ -26,10 +26,10 @@ jobs:
 
       - name: Tag & Push Backend image
         run: |
-          docker tag todo101-todo-backend tanoy/todo-backend:latest
-          docker push tanoy/todo-backend:latest
+          docker tag todo101-todo-backend tanoy3800/todo-backend:latest
+          docker push tanoy3800/todo-backend:latest
           
       - name: Tag & Push Frontend image
         run: |
-          docker tag todo101-todo-frontend tanoy/todo-frontend:latest
-          docker push tanoy/todo-frontend:latest
+          docker tag todo101-todo-frontend tanoy3800/todo-frontend:latest
+          docker push tanoy3800/todo-frontend:latest
